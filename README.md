@@ -1,6 +1,6 @@
-Spring MVC + Mustache example
+Spring MVC + Mustache JS example
 ===============================
-Template for Spring 4 MVC + Mustache Js Template, using Maven build tool and JDK 8 Nashorn Javascript engine.
+Template for Spring 4 MVC + Mustache JS Template, using Maven build tool and JDK 8 Nashorn Javascript engine.
 
 ###1. Technologies used
 * Spring 4.2.4.RELEASE
