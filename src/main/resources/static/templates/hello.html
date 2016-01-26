@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{title}}</title>
+    <link href="{{{resources}}}/core/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{{resources}}}/core/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="{{{resources}}}/core/css/hello.css" rel="stylesheet">
+</head>
+
+<body role="document">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">{{logo}}</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container theme-showcase" role="main">
+
+    <div class="jumbotron">
+        <h1>{{jumbo-title}}</h1>
+        <p>{{jumbo-desc}}</p>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="page-header">
+                <h1>1. Data Types</h1>
+            </div>
+            <p>
+            <div>
+                {{#id}}
+                Hello {{username}}, id : {{.}}
+                {{/id}}
+            </div>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="page-header">
+                <h1>2. List</h1>
+            </div>
+            <p>
+            <pre>{{scriptTemplates}}</pre>
+            <ol>
+                {{#scriptTemplates}}
+                <li>{{.}}</li>
+                {{/scriptTemplates}}
+            </ol>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="page-header">
+                <h1>3. User Object</h1>
+            </div>
+            <p>
+            <div>
+                <pre>{{user}}</pre>
+                <ol>
+                    {{#user}}
+                    <li>email- {{user.email}}</li>
+                    <li>loginFailed- {{user.loginFailed}}</li>
+                    {{/user}}
+                </ol>
+            </div>
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="page-header">
+                <h1>4. List of User Objects (JSON)</h1>
+            </div>
+            <p>
+            <pre>{{users_json}}</pre>
+            {{#users_json}}
+            <ol>
+                <li>email- {{email}}</li>
+                <li>loginFailed- {{loginFailed}}</li>
+            </ol>
+            {{/users_json}}
+
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="page-header">
+                <h1>5. List of User Objects (RAW)</h1>
+            </div>
+            <p>
+                No idea how to loop it...
+            <pre>{{users}}</pre>
+            {{#users}}
+            <ol>
+                <li>email- {{email}}</li>
+                <li>loginFailed- {{loginFailed}}</li>
+            </ol>
+            {{/users}}
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <div class="page-header">
+                <h1></h1>
+            </div>
+            <p>
+            </p>
+        </div>
+    </div>
+    
+</div>
+
+<div class="container">
+    <hr>
+    <footer>
+        <p>&copy; Mkyong.com 2016</p>
+    </footer>
+</div>
+
+<script type="text/javascript" src="{{{resources}}}/core/js/hello.js"></script>
+<script type="text/javascript" src="{{{resources}}}/core/js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="{{{resources}}}/core/js/bootstrap.min.js"></script>
+
+</body>
+</html>
