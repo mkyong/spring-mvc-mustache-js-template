@@ -93,13 +93,14 @@
                 <h1>5. List of User Objects (RAW)</h1>
             </div>
             <p>
-                No idea how to loop it...
             <pre>{{users}}</pre>
             {{#users}}
+            {{#user}}
             <ol>
-                <li>email- {{email}}</li>
-                <li>loginFailed- {{loginFailed}}</li>
+                <li>email- {{user.email}}</li>
+                <li>loginFailed- {{user.loginFailed}}</li>
             </ol>
+            {{/user}}
             {{/users}}
             </p>
         </div>
